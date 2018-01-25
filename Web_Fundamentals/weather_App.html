@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+    $('form').submit(function() {
+        var key= "0187cb1cb5d67627d9feabea47ff2af9";
+        var city= $("#city").val();
+        // your code here (build up your url)
+        $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city +'&&appid=' + key, function(response){
+            var fahr = ((9/5)*(response.main.temp - 273)+32).toFixed(2);
+            var calc = ((response.main.temp)-273).toFixed(2);
+            $('#response').append('<h1>' + city + '</h1>'+ '<p id="fahr" >'+ fahr +'°F / '+ calc + '°C'+'</p>');
+            console.log(response)
+        }, 'json');
+        // your code here
+
+        // don't forget to return false so the page doesn't refresh
+        return false;
+    });
+});
+    
+    </script>
+    <style>
+    form{
+        text-align: center;
+        border: 2px solid black;
+        width: 300px;
+        display: inline-block
+    }
+    input{
+        margin: 10px;
+    }
+    #fahr{
+        display: inline-block;
+        margin-left: 10px;
+        font-weight: bold;
+        color: white;
+        background-color: lightgrey;
+        border-radius: 10px;
+        padding: 6px;
+    }
+    #response{
+        width: 50%;
+        border: 2px solid black;
+        height: 500px;
+        overflow: scroll;
+        text-align: center;
+    }
+    </style>
+    <title>Make your own weather App!</title>
+</head>
+<body>
+    <div id="wrapper">
+        <form>
+            <input type="text" placeholder="City" name="" id="city">
+            <input id="weather" type="submit" value="Search Weather" >
+        </form>
+        <div id="response"></div>
+    </div>
+    
+</body>
+</html>

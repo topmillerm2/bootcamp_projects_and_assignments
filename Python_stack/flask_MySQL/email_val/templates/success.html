@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Success</title>
+    <style>
+    td{
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+    <h2>Email Addresses Entered:</h2>
+    <table>
+        {% for user in all_emails %}
+        <tr>
+            <td>{{ user['email']}}</td>
+            <td>{{ user['created_at']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+        <h3 id = "red">{{message}}</h3>
+    {% endfor %}
+    {% endwith %} 
+    <form action="/goback">
+    <input type="submit" value = "Go Back">
+    </form>
+</body>
+</html>

@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Courier New, Courier, monospace;
+    }
+#wrapper{
+    background-color: #dddfd4;
+    width: 970px;
+    padding: 15px;
+}
+#header{
+    background-color: #23b0ac;
+}
+#header img{
+    width: 50px;
+    margin: 10px;
+}
+#header h1{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+}
+#header ul{
+    display: inline-block;
+    list-style: none;
+    vertical-align: top;
+    margin-left: 60px;
+    margin-top: 37px;
+}
+#header li{
+    float: left;
+    margin-right: 5px;
+    font-size: small;
+}
+#header li a{
+    display: inline;
+    width: 10px;
+    color: white;
+    margin-left: 10px;
+}
+#main-contentwrap{
+    background-color: #fbe59b;
+    margin-top: 15px;
+    color: white;
+    font-size: small;
+}
+#leftbar{
+    background-color: #0f4043;
+    display: inline-block;
+    width: 250px;
+    margin: 10px 0px 0px 10px;
+    padding: 10px;
+    height: 385px;
+    margin-bottom: 10px;
+}
+#leftbar p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#rightbar{
+    display: inline-block;
+    width: 650px;
+    vertical-align: top;
+    margin-left: 22px;
+}
+#topbar{
+    width: 650px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+.three{
+    background-color: #0f4043;
+    display: inline-block;
+    width: 191px;
+    vertical-align: top;
+    height: 100px;
+    padding: 10px;
+}
+#middlebar{
+    width: 650px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+.two{
+    background-color: #0f4043;
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    padding: 10px;
+}
+#gitpush{
+    background-color: #0f4043;
+    width: 630px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    padding: 10px;
+}
+span{
+    color: #34d2c4;
+}
+#footer{
+    background-color: #23b0ac;
+    margin-top: 5px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 60px;
+}
+#footer p{
+    display: inline-block;
+    margin-top: 20px;
+}

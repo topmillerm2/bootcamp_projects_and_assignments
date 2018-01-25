@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Great Number Game</title>
+</head>
+<body style="text-align:center;">
+    <div>
+        <h1>Welcome to the Great Number Game!</h1>
+        <p>I am thinking of a number between 1 and 100</p>
+        <p>Take a guess!</p>
+        
+            {% if session['result']!='You guessed it correct!'%}
+            <form action="/input" method ='post'>
+                <input type="text" name="number" value="">
+                <input type="submit" value="Submit">
+            </form>
+            {% endif %}
+    </div>
+    
+    {% if ((session['result']!='You guessed it correct!')and(session['player_guess']!= 0))%}
+    <div  style="height:200px; width:200px; background-color:red; margin: auto;">
+        <p>{{session['result']}}</p>
+    </div>
+    {%endif%}
+
+    {% if session['result']=='You guessed it correct!'%}
+    <form action='/reset'>
+        <div style="height:200px; width: 200px; background-color: green;margin: auto;">
+            <p>{{session['result']}}</p>
+            <input type="submit" value="Reset" name="Reset">
+        </div>
+    </form>
+    {% endif %}
+    
+</body>
+</html>

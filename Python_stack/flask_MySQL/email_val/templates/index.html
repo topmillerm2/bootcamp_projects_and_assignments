@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+</head>
+<body style= "text-align: center">
+    <h1>Email Validator</h1>
+    {% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+        <h3 id = "red">{{message}}</h3>
+    {% endfor %}
+    {% endwith %}   
+    <form action="/process" method = 'POST'>
+        Email Address: <input type="email" name = "email">
+        <input type="submit" value ="Submit">
+    </form>
+</body>
+</html>

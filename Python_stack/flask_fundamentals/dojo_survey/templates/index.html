@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+        <h2>{{message}}</h2>
+    {%endfor%}
+    {%endwith%}
+
+    <ul>
+        <form action='/process' method='post'>
+            Your Name:
+            <input type='text' name='name'>
+            <br>
+            Dojo Location:
+            <select name='location'>
+                <option value=""></option>
+                <option value="Los Angeles">Los Angeles</option> 
+                <option value="Seattle">Seattle</option>
+                <option value="Chicago">Chicago</option>
+                <option value="San Jose">San Jose</option>
+            </select>
+            <br>
+            Favorite Language:
+            <select name='fav_lang'>
+                    <option value=""></option>
+                    <option value="Python">Python</option> 
+                    <option value="Java">Java</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="iOS">iOS</option>
+            </select>
+            <br>
+            Comment(optional):<br><textarea rows="5" cols="50" name="comment"></textarea>
+            <input type='submit' value='Submit'>
+        </form>
+    </ul>
+</body>
+</html>

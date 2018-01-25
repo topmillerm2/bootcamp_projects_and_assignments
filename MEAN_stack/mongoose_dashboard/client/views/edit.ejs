@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit</title>
+</head>
+<body>
+    <h1>Edit <%= elephant.name %>:</h1>
+    <form action="/process/<%= elephant._id%>" method="post">
+        <p>Name: <input type="text" name="name" value="<%= elephant.name %>"></p> 
+        <p>Country: <input type="text" name="country_of_origin" value="<%= elephant.country_of_origin %>"></p> 
+        <p>Color: <input type="text" name="color" value="<%= elephant.color %>"></p> 
+        <p><input type="submit" value="Edit"></p>
+     
+    </form>
+</body>
+</html>

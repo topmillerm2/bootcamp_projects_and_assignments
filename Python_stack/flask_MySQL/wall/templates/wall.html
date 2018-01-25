@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Wall</title>
+    <style>
+    #border{
+        border: solid black;
+        padding: 10px;
+    }
+    p{
+        display: inline-block;
+        width: 550px;  
+    }
+    #logout{
+        display: inline-block;
+        
+    }
+    h5 {
+        color: blue;
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div id="border">
+    <p>CodingDojo Wall</p>
+    <p>Welcome {{session['name']}}</p>
+    <form id="logout" action="/logout">
+    <input type="Submit" value="Logout">
+    </form>
+    </div>
+
+    <form action="/insert" method = 'POST'>
+    Post a Message<br>
+    <textarea name="message" cols="100" rows="5"></textarea>   
+    <input type="submit" value="Post a message" >
+    <input type="hidden" name="action" value = 'message'>
+    </form>
+
+    {% for i in display %}
+            <h3>{{i['first_name']}} {{i['last_name']}} {{i['created_at']}}</h3>
+            <h4>{{i['message']}}</h4>
+            
+
+            {% for m in com %}
+                {% if i['id'] == m['messages_id'] %}
+                    <h5>{{m['first_name']}} {{m['last_name']}} {{m['created_at']}}</h5>
+                    <h5>{{m['comment']}}</h5>
+                {% endif%}
+            {% endfor %}
+
+            <form action="/insert" method = 'POST'>
+                Post a Comment<br>
+                <textarea name="comment" cols="50" rows="2"></textarea>   
+                <input type="submit" value="Post a comment">
+                <input type="hidden" name="action" value ='comment'>
+                <input type="hidden" name="message_id" value ='{{i['id']}}'>
+            </form>
+            
+    {% endfor %} 
+</body>
+</html>

@@ -1,0 +1,62 @@
+<h5>Your gold: <%= session[:score] %></h5>
+<form action="/restart" method="post"> 
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" name="" value="Restart">
+</form>
+<br>
+
+<style>
+.fieldset{
+    display: inline-block;
+    border: solid 2px black;
+    padding: 15px;
+}
+</style>
+
+<div class="fieldset">
+    <h4>Farm</h4>
+    <h5>(earns 10-20 golds)</h5>
+    <form action="/rpg/farm" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" name="rpg[farm]" value="Find Gold!">
+    </form>
+</div>
+<div class="fieldset">
+    <h4>Cave</h4>
+    <h5>(earns 10-20 golds)</h5>
+    <form action="/rpg/cave" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" name="rpg[cave]" value="Find Gold!">
+    </form>
+</div>
+<div class="fieldset">
+    <h4>House</h4>
+    <h5>(earns 10-20 golds)</h5>
+    <form action="/rpg/house" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" name="rpg[house]" value="Find Gold!">
+    </form>
+</div>
+<div class="fieldset">
+    <h4>Casino</h4>
+    <h5>(earns 10-20 golds)</h5>
+    <form action="/rpg/casino" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" name="rpg[casino]" value="Find Gold!">
+    </form>
+</div>
+
+<h5>Activities :</h5>
+<fieldset>
+    <% if session[:messages].length > 0 %>
+        <% session[:messages].each do |m| %>
+            <p> <%= m %></p>
+        <% end %>
+    <% end %>
+    <!-- <% if flash[:messages] %>
+        <%= flash[:messages] %>
+    <% end %>
+    <% if flash[:ouch] %>
+        <%= flash[:ouch] %>
+    <% end %> -->
+</fieldset>

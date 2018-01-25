@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var socket= io.connect();
+
+            $('button').click(function (){
+                var content = {
+                    name: $('#name').val(),
+                    location: $('#location').val(),
+                    language: $('#language').val(),
+                    comment: $('#comment').val(),
+                }
+                console.log(content)
+                socket.emit( "posting_form", {form: content});
+            });
+            socket.on( 'updated_message', function(data){
+                $('#info').append("You emitted the following information to the server:" +JSON.stringify(data.response))
+                $('#number').append("Your lucky number emitted by the server is " + data.number)
+            })
+        })
+    </script>
+    <style>
+        li{
+            list-style: none;
+            padding: 10px;
+        }
+        ul {
+            border: solid 2px black;
+            width: 400px;
+        }
+        #green {
+            background-color: lightgreen;
+            width: 400px;
+        }
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="green">
+        <p id="info"></p>
+        <p id="number"></p>
+    </div>
+    <ul>
+            <li>Name: <input type="text" name="name" id="name"></li> 
+            <li>Dojo Location: </li>
+            <li>
+                <select name="location" id="location">
+                        <option value="Mountain View">Mountain View</option>
+                        <option value="Burbank">Burbank</option>
+                        <option value="Seattle">Seattle</option>
+                </select>
+            </li>
+            <li>Favorite Language:</li>
+            <li>
+                <select name="language" id="language">
+                    <option value="Javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                    <option value="Ruby">Ruby</option>
+                </select>
+            </li>
+            <li>Comment (optional):</li>
+            <li><textarea name="comment" cols="30" rows="10" id="comment"></textarea></li> 
+            <li><button>Submit</button></li>
+    </ul>
+</body>
+</html>

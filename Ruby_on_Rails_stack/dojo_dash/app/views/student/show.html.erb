@@ -1,0 +1,35 @@
+<h1><%= @dojo.branch %>'s <%= @student.first_name %> <%= @student.last_name %></h1>
+
+<% if flash[:notice] %>
+    <h5 style="color:green">
+        <%= flash[:notice] %>
+    </h5>
+<% end %>
+
+<p>
+    <label>Email:</label>
+    <%= @student.email %>
+</p>
+
+
+
+<h5>Cohort</h5>
+
+<table>
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </thead>
+    <% @cohort.each do |s| %>
+        <tbody>
+        <td><%= s.first_name %></td>
+        <td><%= s.last_name %></td>
+        <td><%= s.email %></td>
+    </tbody>
+    <% end %>
+</table>
+
+<p>
+    <%= link_to "Home", root_path %> || <a href="/dojos/<%= @dojo.id %>/student/<%= @student.id %>/edit">Edit</a>
+</p>

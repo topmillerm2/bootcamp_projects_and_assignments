@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-style: italic;
+}
+#container{
+    height: 400px;
+    overflow: scroll;
+    /* border: 2px solid black; */
+}
+#container h1{
+    font-size: x-large;
+    text-align: center;
+}
+#box_wrapper{
+    margin-left: 30px;
+}
+.name_box{
+    border: 1px solid black;
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+    height: 200px;
+    background-image: url(gameofthrones/lannister.jpg);
+    color:#650000;
+}
+button{
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+/* #headline{
+    width: 50px;
+} */
+#wrapper{
+    border: 2px solid black;
+    height: 450px;
+    margin: 30px 15px;
+    /* background-color: #9f7a04; */
+    background-image: url(gameofthrones/stark.jpg);
+    background-size: 700px;
+}
+#hover{
+    padding-left: 5px;
+    margin-top: -10px;
+    color: #650000;
+    background-color: white;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+#house_details{
+    padding: 15px;
+    color: white;
+}
+#house_details h2{
+    padding: 10px;
+    display: inline-block;
+}
+#house_details p{
+    margin-left: 10px;
+    width: 180px;
+}
+#house_details li{
+    margin-left: 13px;
+    list-style: none;
+    width: 180px;
+}

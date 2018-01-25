@@ -1,0 +1,132 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    }
+
+   .container{
+    width: 970px;
+    /* background-color: grey; */
+    }
+
+   .header{
+    width: 950px;
+    background-color: white;
+    padding:15px;
+    display: inline-block;
+    }
+
+   #name{
+    width: 500px;
+    padding: 5px;
+    display: inline-block;
+    font-family: Courier New, Courier, monospace;
+    }
+
+   #message{
+    width:375px;
+    padding: 5px;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    }
+
+   .content-container{
+    width:950px;
+    background-color: #350435;
+    padding: 15px;
+    display: inline-block;
+    }
+
+   .profilePic{
+    margin: 10px 0;
+    display: inline-block;
+    }
+
+    #Pic{
+    width: 450px;
+    }
+
+    .profiletext{
+    width: 450px;
+    height: 295px;
+    display: inline-block;
+    background-color: #725E75;
+    margin: 10px 0;
+    vertical-align: top;
+    margin-left: 20px;
+    }
+
+    .textheader{
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    }
+
+    .projects{
+    width: 285px;
+    height: 550px;
+    margin-left: 20px;
+    display: inline-block;
+    background-color: #725E75;
+    }
+
+    .img{
+    width: 285px;
+    }
+
+    .projects p{
+    width: 280px;
+    color: white;
+    padding: 15px;
+    }
+
+    .techapps{
+    width: 285px;
+    padding-left: 10px;
+    margin-top: 10px;
+    }
+
+    .logo{
+    width: 47px;
+    display: inline-block;
+    }
+
+    .greenlink{
+    width: 150px;
+    display: inline-block;
+    background-color: #2F502F;
+    margin-left: 100px;
+    border-radius: 10px;
+    }
+
+    .footer{
+    width: 950px;
+    background-color: white;
+    display: inline-block;
+    }
+
+    #contactinfo p{
+    width: 970px;
+    display: inline-block;
+    text-align: center;
+    }
+
+    #sociallink{
+    display: inline-block;
+    width: 970px;
+    text-align: center;
+    }
+
+    #sm{
+    width:20px;
+    text-align: center;
+    }
+
+    #paragraph{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    }
+
+    .profiletext a{
+    margin-left: 10px;
+    }

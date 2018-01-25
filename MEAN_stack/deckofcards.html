@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Deck (){
+            this.deck = []
+    }
+        Deck.prototype.reset = function(){
+
+            let suits = ["Spades","Hearts","Diamonds","Clubs"]
+            let numbers = ['Ace',2,3,4,5,6,7,8,9,10, 'Jack', 'Queen', 'King']
+            for(var suit in suits){
+                for(var number in numbers){
+                    this.deck.push(numbers[number] + "of" + suits[suit]);
+                }
+            }
+            return this;
+    }
+    
+        Deck.prototype.shuffle = function(){
+            var m =this.deck.length,t,i;
+            while(m){
+                i= Math.floor(Math.random()* m--);
+                t = this.deck[m];
+                this.deck[m] = this.deck[i];
+                this.deck[i] = t;
+            }
+            return this;
+        }
+        
+        Deck.prototype.deal = function(){
+            return this.deck.pop();
+        }
+    var Player = function Player(name){
+        this.name = name;
+        this.hand = [];
+    }
+        Player.prototype.draw = function(deck){
+             this.hand.push(deck.deal());
+             return this;
+        }
+        Player.prototype.discard = function(){
+            this.hand.pop();
+            return this;
+        }
+
+    var deck1 = new Deck();
+    deck1.reset().shuffle();
+    console.log(deck1);
+
+    var player1 = new Player("Nina");
+    player1.draw(deck1).draw(deck1);
+    console.log(player1);
+    
+    </script>
+</body>
+</html>

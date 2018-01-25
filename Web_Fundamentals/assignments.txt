@@ -1,0 +1,191 @@
+Last login: Mon Sep 18 20:34:37 on console
+Michaels-MBP:~ Michael$ cd desktop/
+Michaels-MBP:desktop Michael$ mkdir test
+mkdir: test: File exists
+Michaels-MBP:desktop Michael$ cd test
+Michaels-MBP:test Michael$ touch index.html styles.css commands.txt
+Michaels-MBP:test Michael$ cp index.html index_2.html
+Michaels-MBP:test Michael$ rm styles.css
+Michaels-MBP:test Michael$ cd ..
+Michaels-MBP:desktop Michael$ mkdir destination
+Michaels-MBP:desktop Michael$ mvtest/index_2.html destination/
+-bash: mvtest/index_2.html: No such file or directory
+Michaels-MBP:desktop Michael$ mv test/index_2.html destination/ 
+Michaels-MBP:desktop Michael$ cd destination
+Michaels-MBP:destination Michael$ ls
+index_2.html
+Michaels-MBP:destination Michael$ cd ..
+Michaels-MBP:desktop Michael$ cd test
+Michaels-MBP:test Michael$ ls
+commands.txt	copy.html	index.html
+Michaels-MBP:test Michael$ cd ..
+Michaels-MBP:desktop Michael$ rm -rf destination
+Michaels-MBP:desktop Michael$ clear
+
+
+
+
+
+
+
+
+
+
+Michaels-MBP:desktop Michael$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Michaels-MBP:desktop Michael$ mkdir DojoAssignments
+Michaels-MBP:desktop Michael$ cd DojoAssignments
+Michaels-MBP:DojoAssignments Michael$ touch WebFundamentals Python Mean Ruby iOS netCore
+Michaels-MBP:DojoAssignments Michael$ mkdir WebFundamentals Python Mean Ruby iOS netCore
+Michaels-MBP:DojoAssignments Michael$ cd WebFundamentals
+Michaels-MBP:WebFundamentals Michael$ touch about.txt
+Michaels-MBP:WebFundamentals Michael$ cd ..
+Michaels-MBP:DojoAssignments Michael$ cd Python
+Michaels-MBP:Python Michael$ touch about.txt
+Michaels-MBP:Python Michael$ cd ..
+Michaels-MBP:DojoAssignments Michael$ cd Mean
+Michaels-MBP:Mean Michael$ touch about.txt
+Michaels-MBP:Mean Michael$ cd ..
+Michaels-MBP:DojoAssignments Michael$ cd Ruby
+Michaels-MBP:Ruby Michael$ touch about.txt
+Michaels-MBP:Ruby Michael$ cd ..
+Michaels-MBP:DojoAssignments Michael$ cd iOS
+Michaels-MBP:iOS Michael$ touch about.txt
+Michaels-MBP:iOS Michael$ cd ..
+Michaels-MBP:DojoAssignments Michael$ cd netCore
+Michaels-MBP:netCore Michael$ touch about.txt
+Michaels-MBP:netCore Michael$ cd ..
+Michaels-MBP:DojoAssignments Michael$ cd WebFundamentals
+Michaels-MBP:WebFundamentals Michael$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Michaels-MBP:WebFundamentals Michael$ mkdir Git HTML CSS Javascript
+Michaels-MBP:WebFundamentals Michael$ cd Git
+Michaels-MBP:Git Michael$ touch about.txt
+Michaels-MBP:Git Michael$ cd ..
+Michaels-MBP:WebFundamentals Michael$ cd HTML
+Michaels-MBP:HTML Michael$ touch about.txt
+Michaels-MBP:HTML Michael$ cd ..
+Michaels-MBP:WebFundamentals Michael$ cd CSS
+Michaels-MBP:CSS Michael$ touch about.txt
+Michaels-MBP:CSS Michael$ cd ..
+Michaels-MBP:WebFundamentals Michael$ cd Javascript
+Michaels-MBP:Javascript Michael$ touch about.txt
+Michaels-MBP:Javascript Michael$ cd ..
+Michaels-MBP:WebFundamentals Michael$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Michaels-MBP:WebFundamentals Michael$ cd HTML
+Michaels-MBP:HTML Michael$ touch indentation.html
+Michaels-MBP:HTML Michael$ cd ..
+Michaels-MBP:WebFundamentals Michael$ cd ..
+Michaels-MBP:DojoAssignments Michael$ Is -R
+-bash: Is: command not found
+Michaels-MBP:DojoAssignments Michael$ ls -R
+Mean		Python		Ruby		WebFundamentals	iOS		netCore
+
+./Mean:
+about.txt
+
+./Python:
+about.txt
+
+./Ruby:
+about.txt
+
+./WebFundamentals:
+CSS		Git		HTML		Javascript	about.txt
+
+./WebFundamentals/CSS:
+about.txt
+
+./WebFundamentals/Git:
+about.txt
+
+./WebFundamentals/HTML:
+about.txt		indentation.html
+
+./WebFundamentals/Javascript:
+about.txt
+
+./iOS:
+about.txt
+
+./netCore:
+about.txt
+Michaels-MBP:DojoAssignments Michael$ 
+
+

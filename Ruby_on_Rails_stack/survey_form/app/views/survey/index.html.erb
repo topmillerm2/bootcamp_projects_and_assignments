@@ -1,0 +1,33 @@
+<fieldset>
+    <form action="/survey" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <p>
+            <label for="name">Your Name</label>
+            <input type="text" name="user[name]">
+        </p>
+        <p>
+            <label for="location">Dojo Location</label>
+            <select name="user[location]">
+                <option value="Mountain View">Mountain View</option>
+                <option value="Burbank">Burbank</option>
+                <option value="Seattle">Seattle</option>
+            </select>
+        </p>
+        <p>
+            <label for="language">Favorite Language</label>
+            <select name="user[language]">
+                <option value="Javascript">Javascript</option>
+                <option value="Python">Python</option>
+                <option value="RoR">RoR</option>
+            </select>
+        </p>
+        <p>
+            <label for="comment">Comment (optional)</label>
+            <input type="text" name="user[comment]">
+        </p>
+        <input type="submit" value="Submit">
+        
+    </form>
+
+</fieldset>
+  

@@ -1,0 +1,40 @@
+<% content_for :title, "All Users" %>
+<% content_for :left_column do %>
+<h1>All Users</h1>
+
+<table  class="table table-striped">
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Favorite Language</th>
+    </thead>
+    <tbody>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+    </tbody>
+</table>
+
+<% end %>
+
+<% content_for :right_column do %>
+<h1>New User</h1>
+<form>
+    <p>
+        <label>First Name</label>
+        <input type="text" name="" value="">
+    </p>
+    <p>
+        <label>Last Name</label>
+        <input type="text" name="" value="">
+    </p>
+    <p>
+        <label>Favorite Language</label>
+        <input type="text" name="" value="">
+    </p>
+    <input type="submit" name="" class="btn btn-primary" value="Submit">
+    <br>
+    <br>
+    <a class="btn btn-info" href="/posts">All Posts</a>
+</form>
+<% end %>

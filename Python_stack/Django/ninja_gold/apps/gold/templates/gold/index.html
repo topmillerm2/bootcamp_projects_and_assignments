@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Gold</title>
+    <style>
+    .border{
+        border: solid;
+        margin-top: 10px;
+        padding-left: 10px;
+        overflow: scroll;
+        height: 200px;
+    }
+    .gold{
+        background-color: gold;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    <p>Your Gold: {{request.session.gold}}</p>
+    <form action="process/farm" method = 'POST' >
+        {% csrf_token %}
+        <h3>Farm</h3>
+        <input type="submit" name="farm" value="Find Gold" class="gold">
+    </form>
+    <form action="process/cave" method = 'POST' >
+        {% csrf_token %}
+        <h3>Cave</h3>
+        <input type="submit" name="cave" value="Find Gold" class="gold">
+    </form>
+    <form action="process/house" method = 'POST'>
+        {% csrf_token %}
+        <h3>House</h3>
+        <input type="submit" name="house" value="Find Gold" class="gold">
+    </form>
+    <form action="process/casino" method = 'POST' >
+        {% csrf_token %}
+        <h3>Casino</h3>
+        <input type="submit" name="casino" value="Find Gold" class="gold">
+    </form>
+    <br>
+    <a href="reset">Restart</a>
+    <div class="border">
+    {% for message in request.session.message %}
+        <p>{{message}}</p>
+    {% endfor %}
+    </div>  
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <% for (let elephant of elephants) { %>
+    <title><%= elephant.name %></title>
+</head>
+<body>
+    <h1>Name: <%= elephant.name %></h1>
+    <h5>Country: <%= elephant.country_of_origin %></h5>
+    <h5>Color: <%= elephant.color %></h5>
+    <% } %>
+</body>
+</html>

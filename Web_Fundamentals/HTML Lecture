@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Coding Dojo Day 1 </title>
+        <link tags>
+        <meta description tags>
+    </head>
+    <body>
+
+        <div>
+
+        </div>
+        <h1> Biggest Font </h1> ---heading
+        <h2>
+        <h3>
+        <h4>
+        <h5>
+        <h6>            
+
+        <p> dfsdfsdfsf </p> ---paragraph
+
+        <a href= "link">description of link</a>
+
+        <button> My Button</button>
+        <form action= "" method="POST">
+            <input type="text">
+            <input type="date">
+        </form>
+    </body>
+
+</html>

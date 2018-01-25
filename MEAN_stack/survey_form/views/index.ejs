@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    <style>
+    li{
+        list-style: none;
+        padding: 10px;
+    }
+    ul {
+        border: solid 2px black;
+        width: 400px;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <form action="/process" method = 'post'>
+            <li>Name: <input type="text" name="name"></li> 
+            <li>Dojo Location: </li>
+            <li>
+                <select name="location" id="">
+                        <option value="Mountain View">Mountain View</option>
+                        <option value="Burbank">Burbank</option>
+                        <option value="Seattle">Seattle</option>
+                </select>
+            </li>
+            <li>Favorite Language:</li>
+            <li>
+                <select name="language" id="">
+                    <option value="Javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                    <option value="Ruby">Ruby</option>
+                </select>
+            </li>
+            <li>Comment (optional):</li>
+            <li><textarea name="comment" cols="30" rows="10"></textarea></li> 
+            <li><input type="Submit" value="Submit"></li>
+        </form>
+    </ul>
+</body>
+</html>

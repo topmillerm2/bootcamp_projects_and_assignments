@@ -1,0 +1,9 @@
+Belt Review
+
+
+-express server w/mongoose that communicates with Angular front-end
+-modularized applications
+-mongoose - attaching models, validations
+-Angular = forms (with validations), service, routing, express-session, search bar
+-deployment (30min after exam time)
+submission => delete inner node.modules(angular) and delete outer node.modules(express server) if necessary

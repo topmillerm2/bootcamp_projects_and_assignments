@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    width: 800px;
+    border: 2px solid black;
+    height: 800px;
+    overflow: scroll;
+    display: inline-block
+}
+
+.pokedex{
+    display: inline-block;
+    width: 300px;
+    height: 500px;
+    background-color: red;
+    vertical-align: top;
+}
+.screen{
+    width: 270px;
+    height: 470px;
+    background-color: white;
+    margin-left: 15px;
+    margin-top: 20px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Card</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="contact_card.js"></script>
+    <style>
+    #wrapper{
+        border: 1px solid black;
+    }
+    form{
+        border: 1px solid black;
+        width: 50%;
+        padding: 10px;
+    } 
+    input, textarea{
+        display: block; 
+        width: 80%
+    }
+    #left, #right{
+        display: inline-block;
+        vertical-align: top;
+        margin: 20px;
+    }
+    #back{
+        display: none;
+    }
+    #card{
+        width: 150px;
+	    height: 75px;
+	    text-align: center;
+	    border: 1px solid black;
+	    border-radius: 5px;
+	    margin: 5px 0;
+    }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="left">  
+            <form>
+                <label>First Name: </label>
+                <input id="fn" type="text" placeholder="First Name" name="first_name">
+                <label>Last Name: </label>  
+                <input id="ln"type="text" placeholder="Last Name" name="last_name">
+                <label>Description:</label>
+				<textarea id="text"></textarea>
+                <input type="Submit" id="submit" value="Add User">   
+            </form>
+        </div>
+        <div id="right">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body style= "text-align: center">
+    <h1>Login</h1>
+    {% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+        <h4 >{{message}}</h4>
+    {% endfor %}
+    {% endwith %}
+    <form action="/process" method = 'POST'>
+        Email:<input type="text" name="email">
+        Password:<input type="password" name="password">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

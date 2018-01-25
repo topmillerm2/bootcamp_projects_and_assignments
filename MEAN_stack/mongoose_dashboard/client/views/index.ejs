@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All the Elephants</title>
+</head>
+<body>  
+    <h1>Elephants:</h1>
+    <table>
+        <tr>
+            <td>Name </td>
+            <td>Country of Origin </td>
+            <td>Color </td>
+        </tr>
+        <tr>
+            <% for (let elephant of elephants) { %>
+            <td><a href="/elephants/<%=elephant._id%>"</a><%= elephant.name %></a></td>
+            <td><%= elephant.country_of_origin %></td>
+            <td><%= elephant.color %></td>
+            <td><a href="/edit/<%=elephant._id%>">Edit</a></td>
+            <td><a href="/destroy/<%=elephant._id%>">Delete</a></td>
+        </tr>
+            <% } %>
+    </table>
+    <a href="/elephant/new">Add an Elephant</a>
+</body>
+</html>

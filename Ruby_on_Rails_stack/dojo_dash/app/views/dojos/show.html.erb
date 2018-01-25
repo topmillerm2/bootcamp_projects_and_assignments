@@ -1,0 +1,72 @@
+<style>
+    * {
+        padding: 5px;
+    }
+
+    .table {
+        padding: 10px;
+        border: solid 2px black;
+        font-weight: bold;
+    }
+
+    table {
+        border: solid 2px black;
+        /* width: 1250px; */
+    }
+
+    #green {
+        color: green;
+    }
+</style>
+
+<h1><%= @dojo.branch %> || <a href="/dojos/<%= @dojo.id %>/edit">Edit</a></h1>
+<% if flash[:notice] %>
+    <h5 style="color:green">
+        <%= flash[:notice] %>
+    </h5>
+<% end %>
+<p>
+    <label>Address: 
+        <%= @dojo.street %>
+    </label>
+</p>
+<p>
+    <label>City:
+        <%= @dojo.city %>
+    </label>
+    <label>State:
+        <%= @dojo.state %> 
+    </label>
+</p>
+
+<h4>Student Roster:</h4>
+
+<table>
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </thead>
+    <% @students.each do |s| %>
+    <tbody>
+        <td><%= s.first_name %></td>
+        <td><%= s.last_name %></td>
+        <td><%= s.email %></td>
+        <td>
+            <a href="/dojos/<%= @dojo.id %>/student/<%= s.id %>">Show</a> ||
+            <a href="/dojos/<%= @dojo.id %>/student/<%= s.id %>/edit">Edit</a>||
+            <a href="/dojos/<%= @dojo.id %>/student/<%= s.id %>" data-method="delete">Destroy</a>
+            <!-- <form action="/dojos/<%= @dojo.id %>/student" method="post">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <input type="hidden" name="_method" value="delete">
+                <input type="hidden" name="identifier" value="<%= s.id %>">
+                <input type="submit" name="" value="Destroy">
+            </form> -->
+        </td>
+    </tbody>
+    <% end %>
+</table>
+<br>
+
+<%= link_to "Home", root_path %> || <a href="/dojos/<%= @dojo.id %>/student/new">Add Student</a>

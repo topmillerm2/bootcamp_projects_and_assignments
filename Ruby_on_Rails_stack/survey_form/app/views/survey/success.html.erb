@@ -1,0 +1,36 @@
+<fieldset>
+    <div style="color:green">
+        <% if flash[:success] %>
+            <p>
+                <%= flash[:success] %>
+            </p>
+        <% end %>
+    </div>
+   
+    <h1>Submitted information</h1>
+
+    <p>
+        <label >Name: <%= 
+            @result['name'] %>
+        </label>
+    </p>
+    <p>
+        <label>Dojo Location:
+            <%= @result['location'] %>
+        </label>
+    </p>
+    <p>
+        <label>Favorite Language:
+            <%= @result['language'] %>
+        </label>
+    </p>
+    <p>
+        <label>Comment:
+            <%= @result['comment ']%>
+        </label>
+    </p>
+    <p>
+        <%= link_to "Go back", root_path %>
+    </p>
+</fieldset>
+
